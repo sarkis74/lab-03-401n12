@@ -1,0 +1,27 @@
+{
+  "name": "lab-03-401n12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "lint": "eslint **/.js",
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --watchAll --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarkis74/lab-03-401n12.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarkis74/lab-03-401n12/issues"
+  },
+  "homepage": "https://github.com/sarkis74/lab-03-401n12#readme",
+  "dependencies": {
+    "jest": "^24.7.1"
+  }
+}
