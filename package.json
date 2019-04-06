@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/sarkis74/lab-03-401n12#readme",
   "dependencies": {
+    "fs": "0.0.1-security",
     "jest": "^24.7.1"
   }
 }
