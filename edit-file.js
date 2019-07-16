@@ -2,19 +2,23 @@
 
 const fs = require('fs');
 
-let file = process.argv.slice(2)[0];
-let data = process.argv.slice(2)[1];
+const filePath = process.argv[2];
 
-
-fs.readFile(`${process.cwd()}/files/${file}`, (err, data) => {
-    if(err) {
-        return console.log('error:', err);
-    }
-    console.log("RANDOM NUMBER: " + data.toString())
+// Reading the file and storing into a Buffer
+const fileReceived  = fs.readFileSync(filePath, (err) => {
+    if (err) console.error(err);
 });
 
-fs.writeFile(`${process.cwd()}/files/${file}`, Math.floor(Math.random() * 100), (err) => {
-    if (err) {
-        return console.error(err);
-    }
+// Logging existing file
+console.log(fileReceived.toString('utf8'));
+
+// Creating new Buffer
+const randomNumber = Math.random() * 100;
+const newFile = Buffer.from(`${fileReceived} ${randomNumber}`);
+console.log(newFile.toString('utf8'));
+
+// Writing to file
+fs.writeFile(filePath, newFile, (err) => {
+    if (err) console.error(err);
+    console.log('Finished saving!');
 });
