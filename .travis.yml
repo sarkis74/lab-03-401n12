@@ -1,5 +1,10 @@
-language: node_js
-node_js:
-  - '9'
-script:
-  - npm test
+{
+  "os": "linux",
+  "dist": "trusty",
+  "group": "stable",
+  ".result": "configured",
+  "node_js": [
+    "node"
+  ],
+  "language": "node_js"
+}
